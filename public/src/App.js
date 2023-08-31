@@ -7,12 +7,12 @@ import SetAvatar from './pages/SetAvatar';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename = "chat-app">
     <Routes>
       <Route path='/register' element={<Register />}/>
       <Route path='/login' element={<Login />}/>
       <Route path='/setAvatar' element={<SetAvatar />}/>
-      <Route path='/' element={<Chat />}/>
+      <Route exact path='/' element={<Chat />}/>
     </Routes>
     </BrowserRouter>
   )
